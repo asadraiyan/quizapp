@@ -27,7 +27,7 @@
   width: 470px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 2px 2px 3px 3px rgb(227, 219, 219);
+  box-shadow: 2px 2px 3px 3px rgb(243, 206, 218)
 }
 .question-text{
   /* border: 2px solid blue; */
@@ -73,16 +73,25 @@
   padding: 5px 20px 5px 20px;
   font-size: 22px;
   border-radius: 5px;
-  background-image: radial-gradient(circle, #dfd0e1 0%, #376771 100%);
-  letter-spacing: 1px;
+  background-color: #94ccf2;
   margin-top: 50px;
   border: none;
   box-shadow: 2px 2px 2px 2px rgb(136, 130, 130);
   cursor: pointer;
   
 }
+.next:hover{
+  background-color: #3498db
+}
 .txtcontainer{
  font-size: 22px;
  font-weight: 600;
  text-align: center;
+}
+.show-score{
+ position: absolute;
+ top: 45%;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
 }
