@@ -1,16 +1,17 @@
 import React from 'react'
 
 function Result(props) {
-  return (
-    <>
-    <div className='show-score'>
-      Your Score: {props.score} <br />
-      Total Score: {props.totalScore} <br />
-      <button className='next' onClick={props.tryAgain}>Try again</button>
-    </div>
-    
-    </>
-  )
+    return (
+        <>
+            <div className='show-score'>
+                <span>Your Score: {props.score}</span>
+                <span>Total Score: {props.totalScore}</span>    
+            </div>
+            <button className='tryagain' onClick={props.tryAgain}>Try again</button>
+            
+
+        </>
+    )
 }
 
 export default Result

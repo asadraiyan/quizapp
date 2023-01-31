@@ -23,44 +23,50 @@ function Quiz() {
             setScore(score + 1)
         }
     }
-    const resetAll = () =>{
+    const resetAll = () => {
         setShowResult(false)
         setClickedOption(0)
         setScore(0)
         setCurrentQuestion(0)
     }
+    const prevQuestion = () =>{
+        setCurrentQuestion(currentQuestion - 1)   
+    }
     return (
-        
-            <div className="maincontainer">
-                <h1 className='heading'>Welcome to Quiz App!</h1>
-                <div className='container'>
-                    {showResult ? (
-                     <Result score = {score} totalScore = {Quizdata.length} tryAgain ={resetAll}/>
-                    ):(
-                        <>
-                    <div className="question-text">
-                        <div className="txtcontainer">
-                            <span className='question-no'>{currentQuestion + 1}. </span>
-                            <span className='question-txt'> {Quizdata[currentQuestion].question}</span>
+
+        <div className="maincontainer">
+            <h1 className='heading'>Welcome to Quiz App!</h1>
+            <div className='container'>
+                {showResult ? (
+                    <Result score={score} totalScore={Quizdata.length} tryAgain={resetAll} />
+                ) : (
+                    <>
+                        <div className="question-text">
+                            <div className="txtcontainer">
+                                <span className='question-no'>{currentQuestion + 1}. </span>
+                                <span className='question-txt'> {Quizdata[currentQuestion].question}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div className="option">
-                        {Quizdata[currentQuestion].options.map((option, i) => {
-                            return (
-                                <button 
-                                className={`btn ${
-                                    clickedOption === i+1?"checked":null
-                                }`} 
-                                    key={i} 
-                                    onClick={() => setClickedOption(i + 1)}>{option}</button>
-                            )
-                        })}
-                    </div>
-                    <input type="button" value="Next" className='next' onClick={changeQuestion} />
-                    </>)}
-                </div>
+                        <div className="option">
+                            {Quizdata[currentQuestion].options.map((option, i) => {
+                                return (
+                                    <button
+                                        className={`btn ${clickedOption === i + 1 ? "checked" : null
+                                            }`}
+                                        key={i}
+                                        onClick={() => setClickedOption(i + 1)}>{option}</button>
+                                )
+                            })}
+                        </div>
+                        <div className="buttons">
+                       {currentQuestion === 0 ? <></> :  <input type="button" className='previous' value = "Previous" onClick={prevQuestion}/>}
+                       <input type="button" className='next' value="Next" onClick={changeQuestion} />
+                        </div>
+                    </>)
+                }
             </div>
-    
+        </div>
+
     )
 }
 

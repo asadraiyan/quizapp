@@ -1,9 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.maincontainer{
+
+.maincontainer {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -12,12 +13,14 @@
   align-items: center;
   background-image: radial-gradient(circle, #a94bb5 0%, #00d4ff 100%);
 }
-.heading{
+
+.heading {
   text-align: center;
   align-items: center;
   margin-bottom: 40px;
 }
-.container{
+
+.container {
   /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
@@ -29,7 +32,8 @@
   border-radius: 10px;
   box-shadow: 2px 2px 3px 3px rgb(243, 206, 218)
 }
-.question-text{
+
+.question-text {
   /* border: 2px solid blue; */
   display: flex;
   flex-direction: row;
@@ -42,13 +46,15 @@
   box-shadow: 2px 2px 3px 3px rgb(227, 219, 219);
   background-color: #f3f3f3;
 }
-.option{
+
+.option {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 40px;
 }
-.btn{
+
+.btn {
   margin-top: 20px;
   width: 380px;
   height: 40px;
@@ -56,42 +62,84 @@
   border-radius: 3px;
   box-shadow: 2px 2px 3px 3px rgb(227, 219, 219);
   border: none;
-  font-size: 22px;
+  font-size: 20px;
   cursor: pointer;
   background-color: #f3f3f3;
 }
-.checked{
+
+.checked {
   background-color: rgb(15, 182, 15);
   color: white;
   box-shadow: 2px 2px 2px 2px rgb(136, 130, 130);
 
 }
-.btn:hover{
-  background-color: rgb(111, 247, 111);
+
+.btn:hover {
+  background-color: rgb(128, 243, 128);
 }
-.next{
+.buttons{
+  /* border: 2px solid red; */
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 40px;
+  
+
+}
+
+.next {
   padding: 5px 20px 5px 20px;
   font-size: 22px;
   border-radius: 5px;
   background-color: #94ccf2;
-  margin-top: 50px;
   border: none;
   box-shadow: 2px 2px 2px 2px rgb(136, 130, 130);
   cursor: pointer;
-  
+
 }
-.next:hover{
+.previous{
+  padding: 5px 15px 5px 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: rgb(222, 179, 222);
+  border: none;
+  box-shadow: 2px 2px 2px 2px rgb(136, 130, 130);
+  cursor: pointer;
+}
+.previous:hover{
+  background-color: rgb(226, 221, 226);
+}
+
+.next:hover {
   background-color: #3498db
 }
-.txtcontainer{
- font-size: 22px;
- font-weight: 600;
- text-align: center;
+
+.txtcontainer {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
 }
-.show-score{
- position: absolute;
- top: 45%;
+
+.show-score {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
   font-size: 40px;
   font-weight: bold;
   text-align: center;
+  margin: auto;
+}
+.tryagain{
+  padding: 5px 20px 5px 20px;
+  font-size: 22px;
+  border-radius: 5px;
+  background-color: #3498db;
+  border: none;
+  box-shadow: 2px 2px 2px 2px rgb(136, 130, 130);
+  cursor: pointer;
+  margin-bottom: 100px;
+}
+.tryagain:hover{
+  background-color: #a3d2f1;
 }
