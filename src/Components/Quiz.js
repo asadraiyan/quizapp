@@ -59,19 +59,20 @@ function Quiz() {
                         </div>
                         <div className="buttons">
                             {currentQuestion === 0 ? <></> : <input type="button" className='previous' value="<-- Previous" onClick={prevQuestion} />}
-                            <input type="button" className='next' value="Next -->" onClick={changeQuestion} />
+                            {currentQuestion === 9 ? <input type="button" className='submit' value="Submit" onClick={changeQuestion} /> : <input type="button" className='next' value="Next -->" onClick={changeQuestion} />}
                         </div>
                         <div className="option-btn">
-                            <input type="button" className='btn-1' value="1" onClick={() => setCurrentQuestion(0)} />
-                            <input type="button" className='btn-1' value="2" onClick={() => setCurrentQuestion(1)} />
-                            <input type="button" className='btn-1' value="3" onClick={() => setCurrentQuestion(2)} />
-                            <input type="button" className='btn-1' value="4" onClick={() => setCurrentQuestion(3)} />
-                            <input type="button" className='btn-1' value="5" onClick={() => setCurrentQuestion(4)} />
-                            <input type="button" className='btn-1' value="6" onClick={() => setCurrentQuestion(5)} />
-                            <input type="button" className='btn-1' value="7" onClick={() => setCurrentQuestion(6)} />
-                            <input type="button" className='btn-1' value="8" onClick={() => setCurrentQuestion(7)} />
-                            <input type="button" className='btn-1' value="9" onClick={() => setCurrentQuestion(8)} />
-                            <input type="button" className='btn-1' value="10" onClick={() => setCurrentQuestion(9)} />
+                            <input type="button" className={`btn-1 ${currentQuestion === 0 ? "checked1" : null}`} value="1" onClick={() => setCurrentQuestion(0)} />
+                            <input type="button" className={`btn-1 ${currentQuestion === 1 ? "checked1" : null}`} value="2" onClick={() => setCurrentQuestion(1)} />
+                            <input type="button" className={`btn-1 ${currentQuestion === 2 ? "checked1" : null}`} value="3" onClick={() => setCurrentQuestion(2)} />
+                            <input type="button" className={`btn-1 ${currentQuestion === 3 ? "checked1" : null}`} value="4" onClick={() => setCurrentQuestion(3)} />
+                            <input type="button" className={`btn-1 ${currentQuestion === 4 ? "checked1" : null}`} value="5" onClick={() => setCurrentQuestion(4)} />
+                            <input type="button" className={`btn-1 ${currentQuestion === 5 ? "checked1" : null}`} value="6" onClick={() => setCurrentQuestion(5)} />
+                            <input type="button" className={`btn-1 ${currentQuestion === 6 ? "checked1" : null}`} value="7" onClick={() => setCurrentQuestion(6)} />
+                            <input type="button" className={`btn-1 ${currentQuestion === 7 ? "checked1" : null}`} value="8" onClick={() => setCurrentQuestion(7)} />
+                            <input type="button" className={`btn-1 ${currentQuestion === 8 ? "checked1" : null}`} value="9" onClick={() => setCurrentQuestion(8)} />
+                            <input type="button" className={`btn-1 ${currentQuestion === 9 ? "checked1" : null}`} value="10" onClick={() => setCurrentQuestion(9)} />
+                            
                         </div>
                     </>)
                 }

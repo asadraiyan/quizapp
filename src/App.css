@@ -74,6 +74,10 @@
 
 }
 
+.checked1 {
+  background-color: #3498db;
+}
+
 .btn:hover {
   background-color: rgb(128, 243, 128);
 }
@@ -156,10 +160,21 @@
   font-size: 17px;
   cursor: pointer;
   border-radius: 3px;
-  background-color: #f3f3f3;
-  box-shadow: 2px 2px 2px 2px rgb(227, 219, 219);
+  box-shadow: 1px 1px 2px 2px rgb(227, 219, 219);
   border: none;
   flex-wrap: wrap;
+}
+.submit{
+  padding: 5px 15px 5px 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: rgb(244, 154, 154);
+  border: none;
+  box-shadow: 2px 2px 2px 2px rgb(136, 130, 130);
+  cursor: pointer;
+}
+.submit:hover{
+  background-color: rgb(247, 124, 124);
 }
 @media only screen and (max-width: 600px) {
   .container{
