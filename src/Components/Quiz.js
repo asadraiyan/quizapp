@@ -29,8 +29,8 @@ function Quiz() {
         setScore(0)
         setCurrentQuestion(0)
     }
-    const prevQuestion = () =>{
-        setCurrentQuestion(currentQuestion - 1)   
+    const prevQuestion = () => {
+        setCurrentQuestion(currentQuestion - 1)
     }
     return (
 
@@ -51,16 +51,27 @@ function Quiz() {
                             {Quizdata[currentQuestion].options.map((option, i) => {
                                 return (
                                     <button
-                                        className={`btn ${clickedOption === i + 1 ? "checked" : null
-                                            }`}
+                                        className={`btn ${clickedOption === i + 1 ? "checked" : null}`}
                                         key={i}
                                         onClick={() => setClickedOption(i + 1)}>{option}</button>
                                 )
                             })}
                         </div>
                         <div className="buttons">
-                       {currentQuestion === 0 ? <></> :  <input type="button" className='previous' value = "Previous" onClick={prevQuestion}/>}
-                       <input type="button" className='next' value="Next" onClick={changeQuestion} />
+                            {currentQuestion === 0 ? <></> : <input type="button" className='previous' value="<-- Previous" onClick={prevQuestion} />}
+                            <input type="button" className='next' value="Next -->" onClick={changeQuestion} />
+                        </div>
+                        <div className="option-btn">
+                            <input type="button" className='btn-1' value="1" onClick={() => setCurrentQuestion(0)} />
+                            <input type="button" className='btn-1' value="2" onClick={() => setCurrentQuestion(1)} />
+                            <input type="button" className='btn-1' value="3" onClick={() => setCurrentQuestion(2)} />
+                            <input type="button" className='btn-1' value="4" onClick={() => setCurrentQuestion(3)} />
+                            <input type="button" className='btn-1' value="5" onClick={() => setCurrentQuestion(4)} />
+                            <input type="button" className='btn-1' value="6" onClick={() => setCurrentQuestion(5)} />
+                            <input type="button" className='btn-1' value="7" onClick={() => setCurrentQuestion(6)} />
+                            <input type="button" className='btn-1' value="8" onClick={() => setCurrentQuestion(7)} />
+                            <input type="button" className='btn-1' value="9" onClick={() => setCurrentQuestion(8)} />
+                            <input type="button" className='btn-1' value="10" onClick={() => setCurrentQuestion(9)} />
                         </div>
                     </>)
                 }

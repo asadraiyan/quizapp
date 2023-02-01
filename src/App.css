@@ -26,8 +26,8 @@
   flex-direction: column;
   justify-content: baseline;
   align-items: center;
-  height: 525px;
-  width: 470px;
+  height: 550px;
+  width: 475px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 2px 2px 3px 3px rgb(243, 206, 218)
@@ -51,7 +51,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .btn {
@@ -83,7 +83,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 40px;
+  margin-top: 30px;
   
 
 }
@@ -108,11 +108,11 @@
   cursor: pointer;
 }
 .previous:hover{
-  background-color: rgb(226, 221, 226);
+  background-color:  rgb(206, 148, 206);
 }
 
 .next:hover {
-  background-color: #3498db
+  background-color: #65bbf4
 }
 
 .txtcontainer {
@@ -134,12 +134,93 @@
   padding: 5px 20px 5px 20px;
   font-size: 22px;
   border-radius: 5px;
-  background-color: #3498db;
+  background-color: #98c6e4;
   border: none;
   box-shadow: 2px 2px 2px 2px rgb(136, 130, 130);
   cursor: pointer;
   margin-bottom: 100px;
 }
 .tryagain:hover{
-  background-color: #98c6e4;
+  background-color: #51b4f7;
+}
+.option-btn{
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.btn-1{
+  padding: 3px 10px 3px 10px;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: #f3f3f3;
+  box-shadow: 2px 2px 2px 2px rgb(227, 219, 219);
+  border: none;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 600px) {
+  .container{
+    height: 495px;
+    width: 430px;
+  }
+  .question-text {
+    height: 75px;
+    width: 350px;
+}
+.txtcontainer{
+  font-size: 18px;
+}
+.btn {
+  width: 320px;
+  height: 35px;
+  font-size: 17px;
+}
+.next{
+  padding: 3px 8px 3px 8px;
+  font-size: 18px;
+  border-radius: 3px;
+}
+.btn-1 {
+  padding: 1px 8px 1px 8px;
+  font-size: 15px;
+  border-radius: 2px;
+}
+.tryagain{
+  padding: 3px 15px 3px 15px;
+  font-size: 18px;
+  border-radius: 3px;
+}
+.show-score{
+  font-size: 30px;
+}
+.previous {
+  padding: 3px 8px 3px 8px;
+  font-size: 17px;
+  border-radius: 3px;
+}
+}
+@media only screen and (max-width: 450px) {
+  .question-text {
+    height: 70px;
+    width: 300px;
+}
+.btn{
+  width: 275px;
+  height: 30px;
+}
+
+.container{
+  width: 350px;
+  height: 473px;
+  box-shadow: 2px 2px 2px 2px rgb(243, 206, 218)
+}
+.option-btn{
+  width: 335px;
+}
+.heading{
+  font-size: 25px;
+}
 }
